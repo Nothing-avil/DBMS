@@ -215,24 +215,24 @@ Bhattacharya
 c)
 SQL> Select name, empcode from employee order by salary;
 
-NAME									     EMPCODE
+NAME			   EMPCODE
 ------------------------- ----------
-Kapil												 201
-Amit												 401
-Amit												 101
-Bhattacharya								 901
-Rohit												 301
+Kapil			     201
+Amit			     401
+Amit			     101
+Bhattacharya		     901
+Rohit			     301
 
 d)
 SQL> select name, Salary, salary + 500 , salary-50000 from employee;
 
-NAME			                  SALARY   SALARY+500   SALARY-50000
+NAME			   SALARY   SALARY+500   SALARY-50000
 ------------------------- ---------- ----------  ------------
-Amit			                   30000	   30500       -20000
-Kapil			                   22000	   22500       -28000
-Rohit			                   45000	   45500        -5000
-Amit			                   27000	   27500       -23000
-Bhattacharya	       	       33000	   33500       -17000
+Amit			     30000	   30500       -20000
+Kapil			     22000	   22500       -28000
+Rohit			     45000	   45500        -5000
+Amit			     27000	   27500       -23000
+Bhattacharya	       	     33000	   33500       -17000
 
 e)
 SQL>  Select sum(salary) from employee;
@@ -258,13 +258,13 @@ MAX(SALARY)
 19
 SQL> select Name, Salary, (Salary+0.5*Salary) as Increased_Salary from Employee;
 
-NAME			  	  	  	      SALARY   INCREASED_SALARY
+NAME			    SALARY   INCREASED_SALARY
 ------------------------- ---------- ----------------
-Amit				  	  	         30000		45000
-Kapil				  	  	         22000		33000
-Rohit		 	    	  	         45000		67500
-Amit			  	  	  	       27000		40500
-Bhattacharya		   	  	     33000		49500
+Amit			    30000		45000
+Kapil			    22000		33000
+Rohit		 	    45000		67500
+Amit			    27000		40500
+Bhattacharya		    33000		49500
 
 
 20
@@ -275,13 +275,13 @@ Table created.
 21
 SQL> select * from NewEMp;
 
-   EMPCODE NAME 		 		 		 			 		 SALARY
+   EMPCODE NAME 		       SALARY
 ---------- ------------------------- ----------
-       101 Amit 		 		 		 		 			  30000
-       201 Kapil		 		 		 		 			  22000
-       301 Rohit		 	 		 		 				  45000
-       401 Amit 		 		 		 		 			  27000
-       901 Bhattacharya 	 		 		 			33000
+       101 Amit 		 	30000
+       201 Kapil		 	22000
+       301 Rohit		 	45000
+       401 Amit 		 	27000
+       901 Bhattacharya 	 	33000
 
 22
 SQL> create table Emp2 as select * from Employee where 0>1;
@@ -291,13 +291,13 @@ Table created.
 23
 SQL> select * from Employee;
 
-    EMPCODE NAME 		 		 		 			 		 SALARY
+    EMPCODE NAME 		       SALARY
 ---------- ------------------------- ----------
-       101 Amit 		 		 		 		 			  30000
-       201 Kapil		 		 		 		 			  22000
-       301 Rohit		 	 		 		 				  45000
-       401 Amit 		 		 		 		 			  27000
-       901 Bhattacharya 	 		 		 			33000
+       101 Amit 		 	30000
+       201 Kapil		 	22000
+       301 Rohit		 	45000
+       401 Amit 		 	27000
+       901 Bhattacharya 	 	33000
      
 SQL> select * from NewEmp;
 
@@ -315,27 +315,27 @@ no rows selected
 
 24
 SQL> desc employee;
- Name				 		 		 		 		 		 		 			   Null?    Type
+ Name				 	     Null?    Type
  ----------------------------------------- -------- ----------------------------
- EMPCODE					    		 		 		 		 		 		 		 		 NUMBER
- NAME						   		 		 		 		 		 		 		 		     VARCHAR2(25)
- SALARY 	 		 		 		 		 		 		 	        				   NUMBER
+ EMPCODE					     NUMBER
+ NAME						     VARCHAR2(25)
+ SALARY 	 		 		     NUMBER
 
 
 SQL> desc NewEmp;
-  Name				 		 		 		 		 		 		 			   Null?    Type
+  Name				 	     Null?    Type
  ----------------------------------------- -------- ----------------------------
- EMPCODE					    		 		 		 		 		 		 		 		 NUMBER
- NAME						   		 		 		 		 		 		 		 		     VARCHAR2(25)
- SALARY 	 		 		 		 		 		 		 	        				   NUMBER
+ EMPCODE					      NUMBER
+ NAME						      VARCHAR2(25)
+ SALARY 	 		 		      NUMBER
 
 
 SQL> desc Emp2;
-  Name				 		 		 		 		 		 		 			   Null?    Type
+  Name				 	     Null?    Type
  ----------------------------------------- -------- ----------------------------
- EMPCODE					    		 		 		 		 		 		 		 		 NUMBER
- NAME						   		 		 		 		 		 		 		 		     VARCHAR2(25)
- SALARY 	 		 		 		 		 		 		 	        				   NUMBER
+ EMPCODE					      NUMBER
+ NAME						      VARCHAR2(25)
+ SALARY 	 		 		      NUMBER
 
 25
 SQL> create table MyTable as select Name, Salary from Employee;
@@ -345,34 +345,34 @@ Table created.
 26
 SQL> select * from EMployee;
 
-   EMPCODE NAME 		 		 		 			 		 SALARY
+   EMPCODE NAME 		       SALARY
 ---------- ------------------------- ----------
-       101 Amit 		 		 		 		 			  30000
-       201 Kapil		 		 		 		 			  22000
-       301 Rohit		 	 		 		 				  45000
-       401 Amit 		 		 		 		 			  27000
-       901 Bhattacharya 	 		 		 			33000
+       101 Amit 		 	30000
+       201 Kapil		 	22000
+       301 Rohit		 	45000
+       401 Amit 		 	27000
+       901 Bhattacharya 	 	33000
      
 SQL> select * from MyTable;
 
-NAME			  		  		      SALARY
+NAME			    SALARY
 ------------------------- ----------
-Amit					  		         30000
-Kapil					  		         22000
-Rohit					  		         45000
-Amit			 	     		         27000
-Bhattacharya				         33000
+Amit			    30000
+Kapil			    22000
+Rohit			    45000
+Amit			    27000
+Bhattacharya		    33000
 
 27
 SQL> select * from Tab;
 
-TNAME			                     TABTYPE	CLUSTERID
+TNAME			       TABTYPE	CLUSTERID
 ------------------------------ ------- ----------
-DUPLICATE		                   TABLE
-EMP2			                     TABLE
-EMPLOYEE		                   TABLE
-MYTABLE 		                   TABLE
-NEWEMP			                   TABLE
+DUPLICATE		        TABLE
+EMP2			        TABLE
+EMPLOYEE		        TABLE
+MYTABLE 		        TABLE
+NEWEMP			        TABLE
 
 28
 SQL> commit;
@@ -442,26 +442,14 @@ ORA-00942: table or view does not exist
 39
 SQL> select * from tab;
 
-TNAME			                     TABTYPE	CLUSTERID
+TNAME			       TABTYPE	CLUSTERID
 ------------------------------ ------- ----------
-DUPLICATE		                   TABLE
-EMP2			                     TABLE
-EMPLOYEE		                   TABLE
-NEWEMP			                   TABLE
+DUPLICATE		        TABLE
+EMP2			        TABLE
+EMPLOYEE		        TABLE
+NEWEMP			        TABLE
 
 40
 SQL> commit;
 
-SQL> select * from student;
 
-    ROLLNO NAME       CITY
----------- ---------- ----------
-	 1 Amit       Dehradun
-	 2 Kapil      Meerut
-	 3	      Dehradun
-	 4 Amit
-	 5	      Delhi
-
-
-
-Commit complete.
