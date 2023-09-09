@@ -165,11 +165,11 @@ SQL> select * from student;
 
     ROLLNO NAME       CITY
 ---------- ---------- ----------
-	 1         Amit       Dehradun
-	 2         Kapil      Meerut
-	 3	                  Dehradun
-	 4         Amit
-	 5	                  Delhi
+	 1  Amit       Dehradun
+	 2  Kapil      Meerut
+	 3	       Dehradun
+	 4  Amit
+	 5	       Delhi
 
 13
 SQL> alter table student add(
