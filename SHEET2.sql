@@ -452,4 +452,16 @@ NEWEMP			                   TABLE
 40
 SQL> commit;
 
+SQL> select * from student;
+
+    ROLLNO NAME       CITY
+---------- ---------- ----------
+	 1 Amit       Dehradun
+	 2 Kapil      Meerut
+	 3	      Dehradun
+	 4 Amit
+	 5	      Delhi
+
+
+
 Commit complete.
