@@ -7,7 +7,7 @@ Connected.
 2
 SQL> select * from tab;
 
-TNAME			     	     TABTYPE	CLUSTERID
+TNAME		    	   	   	   	     TABTYPE	CLUSTERID
 ------------------------------ ------- ----------
 DUPLICATE		      	      	    TABLE
 
