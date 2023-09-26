@@ -1,7 +1,27 @@
 Practical List 4 (Applying Constraints)
 Subject : DBMS LAB
 1. Logon to Oracle using your User Name and check your user name.
+  SQL> conn
+Enter user-name: CSJ59
+Enter password:
+Connected.
+
 2. See list of all tables.
+  SQL> select * from tab;
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DUPLICATE                      TABLE
+EMP2                           TABLE
+EMPLOYEE                       TABLE
+NEWEMP                         TABLE
+ORDERS                         TABLE
+RECORDS                        TABLE
+STUDENT                        TABLE
+STUDENT2                       TABLE
+STUDENT3                       TABLE
+9 rows selected.
+
 3. Create a table “Car” with following attributes :
 (Assume Data Type and size of column of your own, they must be relevant)
 ModelNo Primary Key
@@ -15,9 +35,43 @@ TopSpeed < 500
 RPM >5000
 CostPrice
 SalePrice
+
+  SQL> create table car(
+  2  ModelNo varchar2(10) primary key,
+  3  ModelName varchar2(10) unique,
+  4  Company varchar2(17) not NULL,
+  5  EngineCapacity varchar2(10) check(EngineCapacity >1000),
+  6  color varchar2(10),
+  7  doors number check(doors>1),
+  8  weight number check(weight >1000),
+  9  TopSpeed number check(TopSpeed <500),
+ 10  RPM number check(RPM > 5000),
+ 11  costprice number,
+ 12  saleprice number);
+
+Table created.
+  
 4. Display the structure of table
+
+  SQL> desc car;
+ Name              Null?    Type
+ ----------------- -------- ------------
+ MODELNO           NOT NULL VARCHAR2(10)
+ MODELNAME                  VARCHAR2(10)
+ COMPANY           NOT NULL VARCHAR2(17)
+ ENGINECAPACITY             VARCHAR2(10)
+ COLOR                      VARCHAR2(10)
+ DOORS                      NUMBER
+ WEIGHT                     NUMBER
+ TOPSPEED                   NUMBER
+ RPM                        NUMBER
+ COSTPRICE                  NUMBER
+ SALEPRICE                  NUMBER
+   
 5. Populate the table with all the car models of “Maruti Suzuki’ , “Hundai” , “Honda” etc companies.
 ( Please Fill Proper and Relevant Values for Each Tuple)
+
+   
 6. Write queries for the following outputs.
 ➢ Show all records
 ➢ Show names of all the cars of Maruti.
