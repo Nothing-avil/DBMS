@@ -314,23 +314,207 @@ The Salary of Sohel is 17000 and he belongs to Meeurt
 6 rows selected.
   
 h. Display the total number of characters in all employee names
+  SQL> select length(trim(empname)) from employee;
+
+LENGTH(TRIM(EMPNAME))
+---------------------
+                    6
+                    6
+                    6
+                    6
+                    4
+                    5
+
+6 rows selected.
+
 i. Display all employee names in Capital letters
+  SQL> select upper(empname) from employee;
+
+UPPER(EMPNAME)
+-------------------------
+YOGESH
+DINESH
+SHEENA
+SUNDAR
+AMIT
+SOHEL
+
+6 rows selected.
+  
 j. Display all employee city in Small letters
+  SQL> select lower(empcity) from employee;
+
+LOWER(EMPCITY)
+-------------------------
+delhi
+delhi
+mumbai
+delhi
+meeurt
+meeurt
+
+6 rows selected.
+  
 k. Display all employee names in Initial capital letters
+  SQL> select initcap(empname) from employee;
+
+INITCAP(EMPNAME)
+-------------------------
+Yogesh
+Dinesh
+Sheena
+Sundar
+Amit
+Sohel
+
+6 rows selected.
+  
 l. Display only the current date
+  SQL> select sysdate from dual;
+
+SYSDATE
+---------
+25-OCT-23
+  
 m. Display only the current time
+  SQL> select to_char(sysdate, 'HH:MI:SS') from dual;
+
+TO_CHAR(
+--------
+04:31:38
+  
 n. Display the current date and time
+  SQL> select (to_char(sysdate, 'DD MM YYYY HH:MI:SS')) AS TODAY from dual;
+
+TODAY
+-------------------
+25 10 2023 04:32:56
+  
 o. Display only the current year
+  SQL> select (to_char(sysdate, 'YYYY')) as year from dual;
+
+YEAR
+----
+2023
+  
 p. Display only the current Month
+  SQL> select (to_char(sysdate, 'month')) as Month from dual;
+
+MONTH
+------------------------------------
+october
+  
 q. Display all records in following format:
 o The date of birth of Yogesh is 1 November Ninenteen Seventy Five
-r. Display the total number of months an employee is working
-s. Display the name and age of each employee (Do not show DOB)
+  SQL> select ('The date of birth of ' || empname || ' is ' || to_char(dob,'DD Month Year')) as statements from employee;
+
+STATEMENTS
+--------------------------------------------------------------------------------
+The date of birth of Yogesh is 01 November  Nineteen Seventy-Five
+The date of birth of Dinesh is 22 May       Nineteen Seventy-Eight
+The date of birth of Sheena is 16 June      Nineteen Eighty-Nine
+The date of birth of Sundar is 17 August    Nineteen Eighty-Two
+The date of birth of Amit is 01 January   Nineteen Sixty-Seven
+The date of birth of Sohel is 01 January   Sixteen Seventy-Four
+
+6 rows selected.
+  
+r. Display the total number of months an employee is working.
+  SQL> select (months_between(TRUNC(sysdate), to_date(doj))) as Age from employee;
+
+       AGE
+----------
+225.903226
+         0
+292.903226
+         0
+229.258065
+-130.74194
+
+6 rows selected.
+  
+s. Display the name and age of each employee (Do not show DOB).
+  SQL> select empname, (months_between(TRUNC(sysdate), to_date(dob))/12) as Age from employee;
+
+EMPNAME                          AGE
+------------------------- ----------
+Yogesh                    47.9919355
+Dinesh                    45.4354839
+Sheena                    34.3682796
+Sundar                    41.1989247
+Amit                      56.8252688
+Sohel                     49.8252688
+
+6 rows selected.
+  
 t. Display the total experience of all employees in years.
+  SQL> select (trunc(months_between(sysdate, doj)/12)) as experience from employee;
+
+EXPERIENCE
+----------
+        18
+         0
+        24
+         0
+        19
+       289
+
+6 rows selected.
+  
 u. Display the full 4 digit birth year of all employee.
+  SQL> select (to_char(dob,'YYYY')) as YEAR from employee;
+
+YEAR
+----
+1975
+1978
+1989
+1982
+1967
+1674
+
+6 rows selected.
+  
 v. Enter a record with your detail in the table with your actual DOB.
+  SQL> insert into employee values(7, 'Sandarbh', 'Rishikesh', '23/Aug/2002', sysdate, 60000);
+
+1 row created.
+  
 w. Display on which day (Mon Tue Wed Etc) you were born.
+  SQL> select empname, (to_char(dob, 'DAY')) as Born_day from employee where empcode=7;
+
+EMPNAME                   BORN_DAY
+------------------------- ------------------------------------
+Sandarbh                  FRIDAY
+
+  
 x. Display list of all employees who were born after your DOB.
+  SQL> select * from employee where dob>'23/AUG/2002';
+
+no rows selected
+  
 y. Delete your record.
+  SQL> delete from employee where empcode=7;
+
+1 row deleted.
+  
 z. Again enter your detail record and this time store your Birth time also.
+  SQL> insert into employee values(7, 'Sandarbh', 'Rishikesh', to_date(to_char('23/Aug/2002 02:10:30'), 'DD MON YYYY HH:MI:SS'), sysdate, 60000);
+
+1 row created.
+  
 aa. Display names, DOB , Time of Birth , age of all records.
+  SQL> select empname, dob, to_char(dob,'HH:MI:SS') as Time_of_Birth, (months_between(TRUNC(sysdate), to_date(dob))/12) as Age from employee;
+
+EMPNAME                   DOB       TIME_OF_        AGE
+------------------------- --------- -------- ----------
+Yogesh                    01-NOV-75 12:00:00 47.9919355
+Dinesh                    22-MAY-78 12:00:00 45.4354839
+Sheena                    16-JUN-89 12:00:00 34.3682796
+Sundar                    17-AUG-82 12:00:00 41.1989247
+Amit                      01-JAN-67 12:00:00 56.8252688
+Sohel                     01-JAN-74 12:00:00 49.8252688
+Sandarbh                  23-AUG-02 02:10:30 21.1827957
+
+7 rows selected.
+  
