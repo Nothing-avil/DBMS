@@ -29,7 +29,7 @@ SQL> select rtrim('hai ') from dual;
 SQL> select 'hai ' from dual; Note the output and difference carefully.
 SQL> select rtrim(' hai ') from dual; Note the output and difference carefully.
 SQL> select concat('GEHU',' university') from dual;
-SQL> select length('GEHU’) from dual;
+SQL> select length('GEHU') from dual;
 SQL> select replace('GEHU university', 'GEHU','GEU') from dual;
 SQL> select substr('UNIVERSITY', 4,6) from dual;
 SQL> select rpad('GEHU',10,'*')from dual;
