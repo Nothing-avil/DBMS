@@ -1,6 +1,6 @@
-# SQL Learning Repository
+# SQL-Oracle
 
-Welcome to the SQL Learning Repository! This repository is designed to help users of all levels, from complete beginners to advanced SQL practitioners, learn and master SQL (Structured Query Language). Whether you're just getting started or looking to refine your skills, you'll find a wealth of resources here to guide you on your journey.
+Welcome to the SQL-Oracle Repository! This repository is designed to help users of all levels, from complete beginners to advanced SQL practitioners, learn and master SQL (Structured Query Language). Whether you're just getting started or looking to refine your skills, you'll find a wealth of resources here to guide you on your journey.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Welcome to the SQL Learning Repository! This repository is designed to help user
 
 ## Introduction to SQL
 
-SQL is a powerful and essential language for managing and querying relational databases. It's used in a wide range of applications, from web development to data analysis. Whether you're interested in working with databases or simply want to enhance your data manipulation skills, SQL is a valuable skill to acquire.
+SQL (Structured Query Language) is a programming language which is used to manage data stored in relational databases like MySQL, MS Access, SQL Server, Oracle, Sybase, Informix, Postgres etc.SQL stands for Structured Query Language which is a computer language for storing, manipulating and retrieving data stored in a relational database. SQL was developed in the 1970s by IBM Computer Scientists and became a standard of the American National Standards Institute (ANSI) in 1986, and the International Organization for Standardization (ISO) in 1987. It's used in a wide range of applications, from web development to data analysis. Whether you're interested in working with databases or simply want to enhance your data manipulation skills, SQL is a valuable skill to acquire.
 
 ## Getting Started
 
@@ -44,16 +44,6 @@ Once you're comfortable with the basics, delve into more advanced SQL topics.
 - [Common Table Expressions (CTEs)](intermediate-sql/ctes.md)
 - [Indexing and Performance Optimization](intermediate-sql/indexing.md)
 
-## Advanced SQL
-
-For those looking to become SQL experts, these advanced topics will take your skills to the next level.
-
-- [Window Functions](advanced-sql/window-functions.md)
-- [Stored Procedures and Functions](advanced-sql/stored-procedures.md)
-- [Transactions and Concurrency](advanced-sql/transactions.md)
-- [Advanced Query Optimization](advanced-sql/query-optimization.md)
-- [Database Security and Permissions](advanced-sql/security.md)
-
 ## Best Practices
 
 Learn SQL best practices to write efficient and maintainable code.
@@ -72,10 +62,13 @@ Explore additional resources, including books, online courses, and community for
 
 We encourage you to explore this repository at your own pace and continuously practice your SQL skills. Whether you're a beginner or an advanced user, there's always something new to learn and discover in the world of SQL.
 
-Happy querying! 📊✨
+📊✨
 
 <br>
 
 ## <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="30" /> Thanks for Visiting
 
 ### Please 🌟 this repository! It really helps others to find this!!  <img src="https://user-images.githubusercontent.com/74038190/216125640-2783ebd5-e63e-4ed1-b491-627a40b24850.png" width="25" />
+
+
+
