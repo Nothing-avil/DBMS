@@ -46,13 +46,13 @@ CourseId CourseName Coursefees Department
 106 MSc(IT) 35000 MCA
 107 BBA 22000 MBA
 Student 
-RollNo Name City
-1 Amit Delhi
-2 Sumit Goa
-3 Shweta Gwaliar
-4 Kumar Goa
-5 Puneet Meerut
-6 Bharat Gwaliar
+|RollNo | Name | City|
+|1 | Amit | Delhi|
+|2 | Sumit | Goa|
+|3 | Shweta | Gwaliar|
+|4 | Kumar | Goa|
+|5 | Puneet | Meerut|
+|6 | Bharat | Gwaliar|
 Register “Commit Your Data”
 RollNo CourseId
 2 101
@@ -97,17 +97,6 @@ old   1: insert into course values(&COURSECODE, &COURSENAME, &COURSEFEES, &DEPAR
 new   1: insert into course values(104, 'BCA', 30000 , 'MCA')
 
 1 row created.
-
-SQL> /
-Enter value for coursecode: 105
-Enter value for coursename: 'BSc(IT) 
-Enter value for coursefees: 
-Enter value for department: 
-old   1: insert into course values(&COURSECODE, &COURSENAME, &COURSEFEES, &DEPARTMENT)
-new   1: insert into course values(105, 'BSc(IT) , , )
-ERROR:
-ORA-01756: quoted string not properly terminated
-
 
 SQL> /
 Enter value for coursecode: 105
